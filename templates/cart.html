@@ -15,7 +15,6 @@
         {% if cart_items %}
         <div class="cart-list">
             {% for item in cart_items %}
-            <span class="product-tag">{{ item.product.category }}</span>
             <article class="cart-card">
                 
                 <img src="{{ item.product.img_url }}" alt="{{ item.product.name}}" class="cart_img" style="width:200px; height: 180px;">

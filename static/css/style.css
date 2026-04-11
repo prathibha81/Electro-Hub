@@ -536,13 +536,13 @@ h2{
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 8px 14px;
+     
     border: none;
-    background-color: #f5f5f5;
-    color: #555;
+    background-color:#ff6b35;
+    color: #fcfafa;
     font-size: 14px;
-    font-weight: 500;
-    border-radius: 6px;
+    font-weight: 700;
+    border-radius: 15px;
     cursor: pointer;
     transition: 0.3s ease;
   }
