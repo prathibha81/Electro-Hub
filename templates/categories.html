@@ -11,18 +11,61 @@
         </div>
     </div>
 
+    <!-- CATEGORY FILTER -->
     <div class="filter-row">
+        <!-- <a class="filter-pill {% if not selected_category %}active{% endif %}"
+           href="{{ url_for('categories') }}">All</a> -->
+
         {% for category in categories %}
-        <a class="filter-pill {% if category == selected_category %}active{% endif %}" href="{{ url_for('categories', category=category) }}">{{ category }}</a>
-        
+        <a class="filter-pill {% if category == selected_category %}active{% endif %}"
+           href="{{ url_for('categories', category=category, brand=selected_brand, price_range=request.args.get('price_range')) }}">
+           {{ category }}
+        </a>
         {% endfor %}
     </div>
 
+    <!-- 🔽 FILTER PANEL (NO JAVASCRIPT) -->
+    <details class="filter-box">
+        <summary>Filter ⚙️</summary>
+
+        <form method="get" action="{{ url_for('categories') }}">
+
+            <!-- KEEP CATEGORY -->
+            <input type="hidden" name="category" value="{{ selected_category }}">
+
+            <!-- BRAND -->
+            <label>Brand</label>
+            <select name="brand">
+                <option value="">All Brands</option>
+                {% for brand in brands %}
+                    <option value="{{ brand }}" {% if brand == selected_brand %}selected{% endif %}>
+                        {{ brand }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <!-- PRICE -->
+            <label>Price</label>
+            <select name="price_range">
+                <option value="">All</option>
+                <option value="0-500">0 - 500</option>
+                <option value="500-1000">500 - 1000</option>
+                <option value="1000-5000">1000 - 5000</option>
+            </select>
+
+            <button type="submit">Apply</button>
+        </form>
+    </details>
+
+    <!-- PRODUCTS -->
     <div class="product-grid">
         {% for product in products %}
         <article class="product-card" style="height: 691px;">
+            <a href="{{ product.vd}}" target="_blank" class="youtube-btn">
+    <i class="fab fa-youtube"></i>
+</a>
                 <span class="product-tag">{{ product.tag }}</span>
-                <IMG class="product-img" src="{{ product.img_url }}" alt="{{ product.name }} image">
+                <img class="product-img" src="{{ product.img_url }}" alt="{{ product.name }} image">
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description }}</p>
                 <div class="product-meta">
@@ -33,7 +76,6 @@
                     <input type="hidden" name="next_page" value="dashboard">
                     <button type="submit">Add to cart</button>
                 </form>
-            </article>
         </article>
         {% else %}
         <div class="empty-state">

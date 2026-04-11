@@ -52,6 +52,9 @@
         <div class="product-grid">
             {% for product in featured_products %}
             <article class="product-card">
+                <a href="{{ product.vd}}" target="_blank" class="youtube-btn">
+    <i class="fab fa-youtube"></i>
+</a>
                 <span class="product-tag">{{ product.tag }}</span>
                 <IMG class="product-img" src="{{ product.img_url }}" alt="{{ product.name }} image">
                 <h2>{{ product.name }}</h2>

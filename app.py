@@ -1,7 +1,7 @@
 from functools import wraps
 import sqlite3
 from flask import Flask, flash, redirect, render_template, request, session, url_for
-
+import random
 def init_db():
     conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
@@ -30,6 +30,7 @@ PRODUCTS = [
         "Brand": "boat",
         "price": 1099,
         "tag": "Best Seller",
+        "vd":"https://www.youtube.com/watch?v=q4ZGqdLhuVk",
         "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ5UVHXQw8Lr5krVCLSvu6Lr0cuwRGVPsY5A&s",
         "description": "Boat Airdopes 300, Cinematic Spatial Audio, 50HRS Battery, 4Mic AI ENx, Fast Charge, App Support, Low Latency, IPX4, v5.3 Bluetooth Earbuds, TWS Ear Buds Wireless Earphones with mic (Gunmetal Black)."
     },
@@ -40,6 +41,7 @@ PRODUCTS = [
         "Brand": "Tribit",
         "price": 2843,
         "tag":"New Launch",
+        "vd":"https://www.youtube.com/watch?v=DgsA54_nl94",
         "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJBFjKVaIM69-xWVDguu3bEk7IR9gQ50SrDA&s",
         "description": "Tribit Updated Version XSound Go Wireless Bluetooth 5.3 Speakers with Loud Stereo Sound & Rich Bass 16W,24H Playtime,150 ft Bluetooth Range,Outdoor Lightweight IPX7 Waterproof,Built-in Mic (Black)"
     },
@@ -50,6 +52,7 @@ PRODUCTS = [
         "Brand":"boat",
         "price":1599 ,
         "tag":"Hot Deal",
+        "vd":"https://www.youtube.com/watch?v=6wCMVyqBPA8",
         "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSldl-0EEgC2zcQLgUEfc8ldifBUkOPLoekHw&s",
         "description": "boAt Rockerz 480, RGB LEDs,6 Light Modes, 40mm Drivers,Beast Mode, 60H Battery, ENx Tech, Stream Ad Free Music via App Support, Bluetooth Headphones, Wireless Over Ear Headphone with Mic (Black Sabre)"
     },
@@ -60,6 +63,7 @@ PRODUCTS = [
          "Brand":"JBL",
         "price":44999 ,
         "tag":"Top Deal",
+        "vd":"https://www.youtube.com/watch?v=bny5v3Gt4Xc",
         "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE1gk-x9xNwY4dz16VwVSxcE13_fVx71RnIQ&s",
         "description":"Connectivity Technology=Bluetooth ,Speaker Maximum Output Power=240 Watts,Frequency Response=40 Hz,Audio Output Mode=Stereo",
         "About":"( Replacement, Installation & On-Site Repair within 24 hours( in Select cities). Powerful JBL Pro Sound Rock out with powerful JBL Pro Sound from two 6.5” woofers that deliver clean, precise, deep bass even at top volume and a pair of 25mm dome tweeters that produce crystal clear highs. Indoors or out, you can fill a space the size of a tennis court with music.,Futuristic Light Show: With Colors synched to the Beat and with Customizable Strobes and Patterns that dazzle your eyes, party with an unique, immersive Audiovisual experience,Up to 18 hours of play time Party from dusk till dawn with up to 18 hours of play time on a single charge. And if that’s not enough, just swap out the replaceable battery* and keep on dancing. Or if you just need an extra boost, 10 minutes fast charge gets you an extra 2 hours of playtime)"
@@ -71,6 +75,7 @@ PRODUCTS = [
         "Brand":"Noise",
         "price":999 ,
         "tag":"Top Rated",
+        "vd":"https://www.youtube.com/watch?v=m0Gtv71gmKw",
         "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXNZBlPbRJpANnXznb7xVyouTuupmIrZJsJw&s",
         "description": " Noise Newly Launched Airwave Crest Bluetooth in Ear Neckband with Metallic Shine on Earbuds,50H of Playtime, EQ Modes, Dual Device Pairing,13mm PEEK+PU Driver, BT v5.4",
     }
@@ -179,7 +184,7 @@ def dashboard():
         for row in db_categories
     ]
 
-    featured_products = PRODUCTS[:4]
+    featured_products = random.sample(PRODUCTS, 4)
 
     # categories from PRODUCTS (clean way)
     
@@ -223,9 +228,10 @@ def categories():
             product for product in PRODUCTS if product["category"] == selected_category
         ]
         
-
+    filter_brand=[  product["Brand"]for product in PRODUCTS ]
     return render_template(
         "categories.html",
+        brands=filter_brand,
         products=filtered_products,
         categories=categories_list,
         selected_category=selected_category,
