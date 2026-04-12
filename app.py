@@ -493,7 +493,7 @@ PRODUCTS = [
 
 
 def format_currency(value):
-    return f"Rs. {value:,.0f}"
+    return f"Rs.{value:,.0f}"
 
 
 app.jinja_env.filters["currency"] = format_currency
@@ -538,10 +538,13 @@ def register():
         conn = sqlite3.connect('database.db')
         cursor = conn.cursor()
         print(name, email, password)
-        cursor.execute(
+        try:
+            cursor.execute(
             "INSERT INTO users (name, email, password) VALUES (?, ?, ?)",
             (name, email, password)
-        )
+            )
+        except sqlite3.IntegrityError:
+            flash("User already exist","info")
 
         conn.commit()
         conn.close()
@@ -568,8 +571,7 @@ def login():
             return redirect(url_for("dashboard"))
         else:
             return render_template("login.html", error="Invalid email or password.")    
-
-        flash("Invalid email or password.", "danger")
+            flash("Invalid email or password.", "danger")
 
     return render_template("login.html")
 
@@ -743,6 +745,14 @@ def remove_from_cart(product_id):
     cart.pop(str(product_id), None)
     session["cart"] = cart
     flash("Item removed from cart.", "info")
+    return redirect(url_for("cart"))
+
+
+@app.route("/place-order",methods=["GET","POST"])
+@login_required
+def place_order():
+    session.pop("cart", None)
+    flash("✅ Order placed", "info")
     return redirect(url_for("cart"))
 
 

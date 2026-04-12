@@ -3,7 +3,7 @@
 {% block title %}Cart | ElectroHub{% endblock %}
 
 {% block content %}
-<section class="cart-layout" >
+<div class="cart-layout" style="display: flex;" >
     <div class="card-panel">
         <div class="section-heading">
             <div>
@@ -15,7 +15,7 @@
         {% if cart_items %}
         <div class="cart-list">
             {% for item in cart_items %}
-            <article class="cart-card">
+            <div class="cart-card">
                 
                 <img src="{{ item.product.img_url }}" alt="{{ item.product.name}}" class="cart_img" style="width:200px; height: 180px;">
                 <div class="card-img">
@@ -41,8 +41,8 @@
                  
                 </div> 
                 </div>
-                <strong>{{ item.line_total | currency }}</strong>
-            </article>
+                <strong>{{ item.line_total|currency }}</strong>
+            </div>
             {% endfor %}
         </div>
         {% else %}
@@ -84,7 +84,9 @@
 </div>
 {% endif %}
        {% if address %}
+       <a href="{{ url_for('place_order') }}">
     <button>Place Order</button>
+    </a>
 {% else %}
     <a href="{{ url_for('checkout') }}">
         <button>Proceed to Checkout</button>
@@ -92,5 +94,5 @@
 {% endif %}
 </a>
     </aside>
-</section>
+</div>
 {% endblock %}
