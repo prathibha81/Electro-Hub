@@ -78,12 +78,14 @@
     
     <div class="product-grid">
         {% for product in products %}
-        <article class="product-card" style="height: 691px;">
+        <article class="product-card" >
             <a href="{{ product.vd}}" target="_blank" class="youtube-btn">
     <i class="fab fa-youtube"></i>
 </a>
                 <span class="product-tag">{{ product.tag }}</span>
+                <div class="mobile-view">
                 <img class="product-img" src="{{ product.img_url }}" alt="{{ product.name }} image">
+                <div class="mobile_view2">
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description }}</p>
                 <div class="product-meta">
@@ -94,6 +96,8 @@
                     <input type="hidden" name="next_page" value="dashboard">
                     <button type="submit">Add to cart</button>
                 </form>
+                </div>
+                </div>
         </article>
         {% else %}
         <div class="empty-state">

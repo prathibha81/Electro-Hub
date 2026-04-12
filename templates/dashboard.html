@@ -27,18 +27,22 @@
 
 <section class="content-grid">
     <div class="panel">
-        <div class="section-heading">
-            <h2>Featured products</h2>
-            <a href="{{ url_for('categories') }}">Browse catalog</a>
-        </div>
-        <div class="product-grid">
+    <div class="section-heading">
+        <h2>Featured products</h2>
+        <a href="{{ url_for('categories') }}">Browse catalog</a>
+    </div>
+
+    <div class="scroll-wrapper">
+        <div class="product-grid" id="featured-pro">
+
+            <!-- ORIGINAL -->
             {% for product in featured_products %}
-            <article class="product-card">
+            <article class="product-card" >
                 <a href="{{ product.vd}}" target="_blank" class="youtube-btn">
-    <i class="fab fa-youtube"></i>
-</a>
+                    <i class="fab fa-youtube"></i>
+                </a>
                 <span class="product-tag">{{ product.tag }}</span>
-                <IMG class="product-img" src="{{ product.img_url }}" alt="{{ product.name }} image">
+                <img class="product-img" src="{{ product.img_url }}">
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description }}</p>
                 <div class="product-meta">
@@ -46,13 +50,36 @@
                     <strong>{{ product.price | currency }}</strong>
                 </div>
                 <form method="post" action="{{ url_for('add_to_cart', product_id=product.id) }}">
-                    <input type="hidden" name="next_page" value="dashboard">
                     <button type="submit">Add to cart</button>
                 </form>
             </article>
             {% endfor %}
+
+            <!-- DUPLICATE -->
+            {% for product in featured_products %}
+            <article class="product-card" >
+                <a href="{{ product.vd}}" target="_blank" class="youtube-btn">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <span class="product-tag">{{ product.tag }}</span>
+                <div class="mobile-view">
+                <img class="product-img" src="{{ product.img_url }}">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                
+                    <span>{{ product.category }}</span>
+                    <strong>{{ product.price | currency }}</strong>
+                </div>
+                <form method="post" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                    <button type="submit">Add to cart</button>
+                </form>
+                
+            </article>
+            {% endfor %}
+
         </div>
     </div>
+</div>
      <div class="panel" style="margin-top: 25px;">
         <div class="section-heading">
             

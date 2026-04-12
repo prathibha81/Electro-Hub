@@ -513,8 +513,9 @@ button:disabled {
 .product-img {
     border-radius: 10px;
     width: 100%;
-    max-width: 195px;
+    max-width: 280px;
     padding: 20px;
+    object-fit: cover;
 } 
 p{
     margin-top: auto;
@@ -540,8 +541,8 @@ h3 {
 h2{
     width: 200px;
     font-size: 20px;
-    height: 20px;
-    margin-bottom: auto;
+    height:auto;
+    
 }
 .remove-btn {
     display: inline-flex;
@@ -602,6 +603,26 @@ h2{
         grid-template-columns: 1fr;
 
     }
+    .product-img{
+        
+        height: 220px;
+    }
+    .product-grid{
+
+        padding: 0px;
+    }
+    .mobile-view{
+        display:flex;
+
+    }
+    .product-img{
+        width:150px;
+        height:150px;
+        margin:auto;
+    }
+    p{
+        font-size: 13px;
+    }
     .summary-card{
         max-width: 100%;
 
@@ -627,3 +648,62 @@ h2{
     padding: 2rem;
 }
 
+.scroll-wrapper{
+    overflow: hidden;
+}
+#featured-pro {
+    animation: autoScroll 20s linear infinite;
+    display: flex;              
+    gap: 20px;
+    width: max-content;
+    will-change: transform;
+}
+.product-card {
+    width: 260px;
+    height: 720px;
+    flex-shrink: 0;
+}
+.scroll-wrapper:hover #featured-pro {
+    animation-play-state: paused;
+}
+@keyframes autoScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 768px) {
+
+    #featured-pro {
+        display: grid;              /* switch to vertical */
+        grid-template-columns:1fr; /* one card per row */
+        animation: none;            /* stop auto scroll */
+        width: 100%;
+    }
+
+    .scroll-wrapper {
+        overflow: visible;          /* allow normal scroll */
+    }
+
+    .product-card {
+        width: 100%;  
+        height: 420px;              
+    }
+}
+@media (max-width: 768px) {
+
+    #featured-pro {
+        flex-direction: column;   /* stack cards vertically */
+        width: 100%;
+    }
+
+    .product-card {
+        width: 100%;              /* full width cards */
+    }
+
+    .scroll-wrapper {
+        overflow: visible;        /* remove horizontal scroll */
+    }
+}

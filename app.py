@@ -36,7 +36,7 @@ PRODUCTS = [
     },
     {
         "id": 2,
-        "name": "Tribit XSound Go Wireless Bluetooth ",
+        "name": "Tribit XSound GoBluetooth ",
         "category": "Audio",
         "Brand": "Tribit",
         "price": 2843,
@@ -66,7 +66,7 @@ PRODUCTS = [
         "vd":"https://www.youtube.com/watch?v=bny5v3Gt4Xc",
         "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE1gk-x9xNwY4dz16VwVSxcE13_fVx71RnIQ&s",
         "description":"Connectivity Technology=Bluetooth ,Speaker Maximum Output Power=240 Watts,Frequency Response=40 Hz,Audio Output Mode=Stereo",
-        "About":"( Replacement, Installation & On-Site Repair within 24 hours( in Select cities). Powerful JBL Pro Sound Rock out with powerful JBL Pro Sound from two 6.5” woofers that deliver clean, precise, deep bass even at top volume and a pair of 25mm dome tweeters that produce crystal clear highs. Indoors or out, you can fill a space the size of a tennis court with music.,Futuristic Light Show: With Colors synched to the Beat and with Customizable Strobes and Patterns that dazzle your eyes, party with an unique, immersive Audiovisual experience,Up to 18 hours of play time Party from dusk till dawn with up to 18 hours of play time on a single charge. And if that’s not enough, just swap out the replaceable battery* and keep on dancing. Or if you just need an extra boost, 10 minutes fast charge gets you an extra 2 hours of playtime)"
+        "About":"Replacement,  Powerful JBL Pro Sound Rock out with powerful JBL Pro Sound from two 6.5”   Indoors or out, you can fill a space the size of a tennis court with music.,Futuristic Light Show: With Colors synched to the Beat and with Customizable Strobes and Patterns that dazzle your eyes, party with an unique, immersive Audiovisual experience,Up to 18 hours of play time Party from dusk till dawn with up to 18 hours of play time on a single charge.  swap out the replaceable battery* and keep on dancing. 10 minutes fast charge gets you an extra 2 hours of playtime)"
     },
     {
         "id": 5,
@@ -100,7 +100,7 @@ PRODUCTS = [
         "price":15999 ,
         "vd":"https://www.youtube.com/watch?v=C60IWHHo8mM",
         "img_url":"https://m.media-amazon.com/images/I/51iNNIdPqkL.jpg",
-        "description": "Digital Storage Capacity 1 TB,Hard Disk Interfac PCIE x 4,Connectivity Technology PCIe,Special Feature PCIe Gen4 NVMe Technology, Optimized Power Efficiency,Hard Disk Description Solid State Drive,Compatible Devices Desktop,Installation Type Internal Hard Drive,Hard Disk Size 1 TB ,Specific Uses For Product=Gaming",
+        "description": " 1 TB SSD,Hard Disk Interfac PCIE x 4,Connectivity Technology PCIe,Special Feature PCIe Gen4 NVMe Technology, Optimized Power Efficiency, SSD,Compatible Devices Desktop, Internal Hard Drive, 1 TB HDD ,Specific Uses For Gaming",
 
     },
     {
@@ -149,7 +149,7 @@ PRODUCTS = [
         "tag":"Hot Deal",
         "vd":"https://www.youtube.com/watch?v=lIQvolP97FM",
         "img_url":"https://m.media-amazon.com/images/I/71NZHYzkyzL._AC_UF1000,1000_QL80_.jpg",
-        "description": "Compatible Mountings Sony E Aspect Ratio 1:1, 3:2, 4:3 Photo Sensor Technology CMOS ,Supported File Format=HEIF, JPEG, Raw Image Stabilisation Sensor-shift,Maximum Focal Length 135 Millimeters,Optical Zoom=1 xExpanded ISO Minimum=50,Metering Description=Center Weighted"
+        "description": "Compatible Mountings Sony E Aspect Ratio 1:1, 3:2, 4:3 Photo Sensor Technology CMOS ,HEIF, JPEG, Raw Image Stabilisation Sensor-shift, 135 mm,1x Expanded ISO Minimum=50,Center Weighted"
     },
 
     {
@@ -160,7 +160,7 @@ PRODUCTS = [
         "tag":"Leatest",
         "vd":"https://www.youtube.com/watch?v=MSs7EITvCBs",
         "img_url":"https://www.xboom.in/wp-content/uploads/2025/08/DJI-Pocket-3-1.jpg",
-        "description": "Photo Sensor Technology CMOS,Video Capture Resolution 4K,Maximum Focal Length=20 Millimeters Maximum Aperture 2f Flash Memory Type=SmartMedia Video Capture FormatMP4 Supported Audio Format Advanced Audio Codec Screen Size 2 Inches Connectivity Technology=Bluetooth, Wi-Fi"
+        "description": "CMOS,Video Capture Resolution 4K,20 Millimeters Maximu m Aperture 2f SmartMedia Video Capture FormatMP4 Supported Audio Format Advanced Audio Codec Screen Size 2 Inches ,Bluetooth, Wi-Fi"
     },
     {
         "id": 13,
@@ -171,18 +171,18 @@ PRODUCTS = [
         "tag":"New Launch",
         "vd":"https://www.youtube.com/watch?v=UZ5G0tVwBkI",
         "img_url":"https://m.media-amazon.com/images/I/61dUvabnSmL._AC_UF1000,1000_QL80_.jpg",
-        "description": "Photo Sensor Technology CMOS Video Capture Resolution 5.3K60/50, 4K120/100, 2.7K240/200, 1080p240/200 resolution/fps3 Focal Length=30 Millimeters Maximum Aperture 2.8 f Flash Memory Type Micro SD, SD Video Capture Format MP4 Supported Audio Format AAC, MP3, PCM, FLAC, Dolby Digital/AC-3 Screen Size 2.27 Inches Connectivity Technology USB"    
+        "description": "CMOS Video Capture Resolution 5.3K60/50, 4K120/100, 2.7K240/200, 1080p240/200 resolution/fps3  Mm 2.8 f  Micro SD,Supported Audio Format AAC, MP3, PCM, FLAC, Dolby Digital/AC-3 Screen Size 2.27 Inches USB"    
         },
         {
             "id": 14,
-        "name": "Irusu Play VR Ultra 3D VR Headset for Mobile",
+        "name": "Irusu Play VR Ultra 3D VRHeadset for Mobile",
         "category": "Gaming",
         "price":3099 ,
         "Brand":"IRUSU",
         "tag":"Top Deal",
         "vd":"https://www.youtube.com/watch?v=O0YRW5wkFcs",
         "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOMQdgnmf8dhe4KGuMH9YBwQzau75XJSfXA&s",
-        "description": "Specific Uses For Product=For Experiencing the Virtual reality with users mobile Included Components=VR Headset,remote controller Compatible Devices=Smartphone Age Range (Description) Adult Product Dimensions=21D x 23W x 10H Centimeters,Operating System=Android, iOS)"
+        "description": "For Experiencing the Virtual reality with users mobile Included ComponentsVR Headset,remote controller Smartphone Age Range (Description) Adult21D x 23W x 10H Centimeters, OS Android, iOS)"
         
     },
     {
@@ -308,7 +308,7 @@ PRODUCTS = [
         "tag":"20% off",
         "vd":"https://www.youtube.com/watch?v=UC7mc5inDpI",
         "img_url":"https://m.media-amazon.com/images/I/61E4hhNZnML._AC_UF1000,1000_QL80_.jpg",
-        "description": "Brand TECNICO,Model Name TECI5 416512TE OLYCPU,Operating System Windows 11,CPU Model Core i5,CPU Speed 3 GHz,Cache Size 256 MB,Graphics Card Description Integrated,Graphics Coprocessor Intel HD Graphics 4600 Memory Storage Capacity 512 GB,Specific Uses For Product Business",
+        "description": "Brand TECNICO,Model Name TECI5 416512TE OLYCPU,Operating System Windows 11,CPU  i5,CPU Speed 3 GHz,Integrated Graphics Card, Intel HD Graphics 4600 512 GBstorage ,Specific Uses For Product Business",
     },
 
 {
@@ -330,7 +330,7 @@ PRODUCTS = [
         "tag":"Best Seller",
         "vd":"https://www.youtube.com/watch?v=R7snwa6xgkw",
         "img_url":"https://m.media-amazon.com/images/I/71gLmEKpadL._AC_UF1000,1000_QL80_.jpg",
-        "description": "Brand HP, Connectivity Technology Wi-Fi,Printing Technology Laser,Special Feature Auto-Duplex, Network-Ready,Colour Black,Model Name HP Laser,Printer Output Monochrome,Max Print speed Monochrome 30 ppm,Item Weight 13.79 Kilograms,Product Dimensions 33.5D x 40W x 36.5H Centimeters",
+        "description": "HP Laser, Connectivity Technology Wi-Fi,Printing Technology Laser,Special Feature Auto-Duplex, Colour Black,Model ,  Output Monochrome,Max Print speed Monochrome 30 ppm, 13.79 Kg,Product Dimensions 33.5Dx40W x36.5H cm",
     },
 
 {
@@ -341,7 +341,7 @@ PRODUCTS = [
         "tag":"Hot Deal",
         "vd":"https://www.youtube.com/watch?v=D1OIOMcgAlI",
         "img_url":"https://5.imimg.com/data5/SELLER/Default/2022/3/HU/UW/KN/147282547/ecotank-l3250-wi-fi-all-in-one-ink-tank-printer-black-37-5-x-34-7-x-17-9-500x500.jpg",
-        "description": "Brand=Epson Connectivity Technology Wi-Fi,Printing Technology Epson Heat-Free Technology,Special Feature Network-Ready,Colour Black,Model Name L3252,Printer Output Colour,Maximum Print Speed (Colour) 15 ppm,Max Print speed Monochrome 33 ppm,Item Weight 5600 Grams",
+        "description": "Connectivity Technology Wi-Fi, Epson Heat-Free Technology,Special Feature Network-Ready,Colour Black,Printer Output Colour, 15 ppm,Max Print speed Monochrome 33 ppm, 5600 Grams",
     },
 {
         "id": 29,
@@ -351,7 +351,7 @@ PRODUCTS = [
         "tag":"exclusive",
         "vd":"https://www.youtube.com/watch?v=eXjezTD6n48",
         "img_url":"https://m.media-amazon.com/images/I/71m3R5jc3IL._AC_UF350,350_QL80_.jpg",
-        "description": "Brand Canon Connectivity Technology USB, Wi-Fi Printing Technology Inkjet Special Feature Auto Document Feeder, Auto-Duplex, Display Screen,Colour White Model Name PIXMA G4780,Printer Output Colour,Maximum Print Speed (Colour) 6 ppm,Max Print speed Monochrome 11 ppm,Item Weight 7500 Grams" },
+        "description": "PIXMA G4780 Connectivity Technology USB, Wi-Fi Printing Technology Inkjet Special Feature, Auto-Duplex, Display Screen,Colour White ,Output Colour, 6 ppm,Max Print speed Monochrome 11 ppm, 7500 Grams" },
 {
         "id": 30,
         "name": "Brother DCP-T436W",
@@ -360,7 +360,7 @@ PRODUCTS = [
         "tag":"10% off",
         "vd":"https://www.youtube.com/watch?v=HzefUBp1v88",     
         "img_url":"https://m.media-amazon.com/images/I/71iYpDZG6AL.jpg",
-        "description": "Brand Brother,Connectivity Technolog USB, Wi-Fi,Printing Technology Inkjet Special Feature Borderless Printing, Email Print, Refillable Ink Tank, Scan To E-Mail,Colour White Model Name DCP-T436W,Printer Output Colour,Maximum Print Speed (Colour) 11 ppm,Max Print speed Monochrome 27 ppm,Item Weight 5.9 Kilograms"
+        "description": "DCP-T436W white Connectivity Technolog USB, Wi-Fi,Inkjet Special Feature Borderless Printing, Email Print, Refillable Ink Tank, Scan To E-Mail,,Output Colour,Maximum Print Speed 11 ppm,27 ppm,5.9 Kilograms"
 },
 {
 
@@ -453,7 +453,7 @@ PRODUCTS = [
         "tag":"Hot Deal",
         "vd":"https://www.amazon.in/live/video/18c4d5c5f44b42b8b946ee52e66e23a4",
         "img_url":"https://m.media-amazon.com/images/I/71g09REHnkL.jpg",
-        "description":"Operating System android Wearable Computer Type Smart Watch,Special Feature Activity Tracker, Calorie Tracker, Heart Rate Monitor, Notifications, Oxymeter (SpO2)Battery Capacity 300,Connectivity Technology Bluetooth"
+        "description":"Operating System android Wearable Computer Type Smart Watch,Special Feature Activity Tracker, Calorie Tracker, Heart Rate Monitor, Notifications, Oxymeter (SpO2)Battery Capacity 300,Bluetooth"
     },
 {
         "id": 40,
@@ -463,7 +463,7 @@ PRODUCTS = [
         "tag":" limited offer",
         "vd":"https://www.youtube.com/watch?v=bNxFP16s67s",
         "img_url":"https://m.media-amazon.com/images/I/71rjlGEi+1L._AC_UF1000,1000_QL80_FMwebp_.jpg",
-        "description": "Operating System android,Special Feature Activity,Tracker, Heart Rate Monitor, Multisport Tracker, Phone Call, Stress Tracking,Battery Capacity 1200 MilliampHours,Connectivity,Technology Bluetooth,Wireless Communication Standard Bluetooth"
+        "description": "Operating System android,Special Feature Activity,Tracker, Heart Rate Monitor, Multisport Tracker, Phone Call, Stress Tracking,1200 MilliampHours,Connectivity,Technology Bluetooth,Standard Bluetooth"
     },
 
 {
@@ -474,7 +474,7 @@ PRODUCTS = [
         "tag":"Best Seller",
         "vd":"https://www.youtube.com/watch?v=LYnBakPVSLg",
         "img_url":"https://m.media-amazon.com/images/I/713NySDNqkL._AC_UF1000,1000_QL80_.jpg",
-        "description": "Memory Storage Capacity 8 MB,Special Feature Activity Tracker, Gesture Control, Heart Rate Monitor, Sleep Monitor ,Battery Capacity 23.5,Connectivity Technology Bluetooth,Wireless Communication ,Standard=Bluetooth"
+        "description": "Memory Storage Capacity 8 MB,Special Feature Activity Tracker, Gesture Control, Heart Rate Monitor, Sleep Monitor ,Battery Capacity 23.5,Connectivity Technology Bluetooth,Wireless Communication ,Bluetooth"
     },
 
 {
@@ -594,7 +594,7 @@ def dashboard():
         for row in db_categories
     ]
 
-    featured_products = random.sample(PRODUCTS, 4)
+    featured_products = random.sample(PRODUCTS, 10)
 
     # categories from PRODUCTS (clean way)
     
