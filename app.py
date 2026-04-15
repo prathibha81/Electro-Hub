@@ -23,63 +23,6 @@ app = Flask(__name__)
 app.secret_key = "electronics-store-demo-secret"
 
 
-<<<<<<< HEAD
-
-=======
-PRODUCTS = [
-    {
-        "id": 1,
-        "name": "Boat airdopes 300",
-        "category": "Audio",
-        "Brand": "boat",
-        "price": 1099,
-        "tag": "Best Seller",
-        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ5UVHXQw8Lr5krVCLSvu6Lr0cuwRGVPsY5A&s",
-        "description": "Boat Airdopes 300, Cinematic Spatial Audio, 50HRS Battery, 4Mic AI ENx, Fast Charge, App Support, Low Latency, IPX4, v5.3 Bluetooth Earbuds, TWS Ear Buds Wireless Earphones with mic (Gunmetal Black)."
-    },
-    {
-        "id": 2,
-        "name": "Tribit XSound Go Wireless Bluetooth ",
-        "category": "Audio",
-        "Brand": "Tribit",
-        "price": 2843,
-        "tag":"New Launch",
-        "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJBFjKVaIM69-xWVDguu3bEk7IR9gQ50SrDA&s",
-        "description": "Tribit Updated Version XSound Go Wireless Bluetooth 5.3 Speakers with Loud Stereo Sound & Rich Bass 16W,24H Playtime,150 ft Bluetooth Range,Outdoor Lightweight IPX7 Waterproof,Built-in Mic (Black)"
-    },
-    {
-        "id": 3,
-        "name": "boAt Rockerz 480",
-        "category": "Audio",
-        "Brand":"boat",
-        "price":1599 ,
-        "tag":"Hot Deal",
-        "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSldl-0EEgC2zcQLgUEfc8ldifBUkOPLoekHw&s",
-        "description": "boAt Rockerz 480, RGB LEDs,6 Light Modes, 40mm Drivers,Beast Mode, 60H Battery, ENx Tech, Stream Ad Free Music via App Support, Bluetooth Headphones, Wireless Over Ear Headphone with Mic (Black Sabre)"
-    },
-    {
-        "id": 4,
-        "name": "JBL Partybox 320",
-        "category": "Audio",
-         "Brand":"JBL",
-        "price":44999 ,
-        "tag":"Top Deal",
-        "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE1gk-x9xNwY4dz16VwVSxcE13_fVx71RnIQ&s",
-        "description":"Connectivity Technology=Bluetooth ,Speaker Maximum Output Power=240 Watts,Frequency Response=40 Hz,Audio Output Mode=Stereo",
-        "About":"( Replacement, Installation & On-Site Repair within 24 hours( in Select cities). Powerful JBL Pro Sound Rock out with powerful JBL Pro Sound from two 6.5” woofers that deliver clean, precise, deep bass even at top volume and a pair of 25mm dome tweeters that produce crystal clear highs. Indoors or out, you can fill a space the size of a tennis court with music.,Futuristic Light Show: With Colors synched to the Beat and with Customizable Strobes and Patterns that dazzle your eyes, party with an unique, immersive Audiovisual experience,Up to 18 hours of play time Party from dusk till dawn with up to 18 hours of play time on a single charge. And if that’s not enough, just swap out the replaceable battery* and keep on dancing. Or if you just need an extra boost, 10 minutes fast charge gets you an extra 2 hours of playtime)"
-    },
-    {
-        "id": 5,
-        "name": "Noise Airwave Bluetooth",
-        "category": "Audio",
-        "Brand":"Noise",
-        "price":999 ,
-        "tag":"Top Rated",
-        "img_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXNZBlPbRJpANnXznb7xVyouTuupmIrZJsJw&s",
-        "description": "Up to 50 hour playtime:- For playlists that you never want to hit pause on, without needing to worry about running out of chargem 10mm Driver:- Dive into the world of balanced audio quality.ENC for superior calling:- Experience a clear calling experience when you talk on the phone with Environmental Noise Cancellation.Low Latency (up to 50ms):- Gaming, talking or listening to music - it’s a lag-free zone with up to 50ms of low latency.",
-    }
-]
->>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 
 
 def format_currency(value):
@@ -186,13 +129,9 @@ def dashboard():
         for row in db_categories
     ]
 
-<<<<<<< HEAD
     featured_products = random.sample(PRODUCTS, 10)
-=======
-    featured_products = PRODUCTS[:4]
->>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 
-    # categories from PRODUCTS (clean way)
+    
     
 
     user = cursor.execute(
@@ -214,11 +153,8 @@ def dashboard():
 @login_required
 def categories():
     selected_category = request.args.get("category", "All")
-<<<<<<< HEAD
     selected_brand=request.args.get("brand")
     price_range=request.args.get("price_range")
-=======
->>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
     conn=sqlite3.connect('database.db')
     cursor=conn.cursor()
     cursor.execute('''SELECT * FROM categories''')
@@ -238,7 +174,6 @@ def categories():
         filtered_products = [
             product for product in PRODUCTS if product["category"] == selected_category
         ]
-<<<<<<< HEAD
     if selected_brand:
         filtered_products = [
             p for p in filtered_products
@@ -254,9 +189,6 @@ def categories():
         brands = sorted({p.get("Brand") for p in PRODUCTS if p.get("Brand")})
     else:
         brands=sorted({ p.get("Brand") for p in PRODUCTS if p.get("Brand") and p.get("category") == selected_category})
-=======
-        
->>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 
     
     #filter_brand=[  product["Brand"]for product in PRODUCTS ]
