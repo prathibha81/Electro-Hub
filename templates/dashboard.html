@@ -94,6 +94,34 @@
             <a class="chip" href="{{ url_for('categories', category=category.name) }}">{{ category.name }}</a>
             
             </div>
+<<<<<<< HEAD
+=======
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="section-heading">
+            <h2>Featured products</h2>
+            <a href="{{ url_for('categories') }}">Browse catalog</a>
+        </div>
+        <div class="product-grid">
+            {% for product in featured_products %}
+            <article class="product-card">
+                <span class="product-tag">{{ product.tag }}</span>
+                <IMG class="product-img" src="{{ product.img_url }}" alt="{{ product.name }} image">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <div class="product-meta">
+                    <span>{{ product.category }}</span>
+                    <strong>{{ product.price | currency }}</strong>
+                </div>
+                <form method="post" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                    <input type="hidden" name="next_page" value="dashboard">
+                    <button type="submit">Add to cart</button>
+                </form>
+            </article>
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
             {% endfor %}
         </div>
     </div>

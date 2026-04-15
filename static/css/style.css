@@ -404,8 +404,22 @@ button:disabled {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
+.card-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+<<<<<<< HEAD
 
+=======
+.cart-form {
+    display: grid;
+    gap: 0.5rem;
+}
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 
 .cart-price {
     display: flex;
@@ -429,8 +443,12 @@ button:disabled {
     backdrop-filter: blur(18px);
     border-radius: 28px;
     padding: 2rem;
+<<<<<<< HEAD
     width: 100%;
     margin:0 0 0 auto;
+=======
+    width: 500px;
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 }
 
 .summary-row.total {
@@ -465,11 +483,14 @@ button:disabled {
 }
 
 @media (max-width: 640px) {
+<<<<<<< HEAD
     .auth-page{
     width: min(1180px, calc(100% - 2rem));
     margin: 0 auto;
     padding: 2rem 0 3rem;
 }
+=======
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
     
 
     .auth-copy,
@@ -480,12 +501,18 @@ button:disabled {
     }
 }
 .page-shell{
+<<<<<<< HEAD
     padding: 2rem 0 15rem; width: auto; 
 }
 /* .page-shell{
     margin: 0 auto;
     padding: 2rem 0 3rem;
 } */
+=======
+    margin: 0 20px;
+    padding: 2rem 0 3rem;
+}
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 .chip-item {
     width: 200px;
     height: 260px;
@@ -493,6 +520,7 @@ button:disabled {
     border-radius: 10px;
     
 }
+<<<<<<< HEAD
 .auth-page{
     margin-top:200px;
     justify-content: center;
@@ -500,6 +528,8 @@ button:disabled {
     min-height: 100vh;
 
 }
+=======
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 .chip-image {
     border-radius: 10px;
     width: 195px;
@@ -515,15 +545,21 @@ button:disabled {
 }
 .product-img {
     border-radius: 10px;
+<<<<<<< HEAD
     width: 100%;
     max-width: 280px;
     padding: 20px;
     object-fit: cover;
+=======
+    width: 195px;
+    padding: 20px;
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 } 
 p{
     margin-top: auto;
 }
 h3 {
+<<<<<<< HEAD
     width: 100%;
     height: auto;            
     padding-left: 5px;
@@ -531,12 +567,18 @@ h3 {
     font-size: 30px;
     text-align: left;
     display: block;          
+=======
+    width: 200px;
+    height: 20px;
+    margin-bottom: auto;
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
 }
 .product-card:hover{
     
     transform: translateY(-10px);
     transition: all 0.5s ease;
 }
+<<<<<<< HEAD
 .card-panel{
     width: 100%;
     max-width: 1000px;
@@ -710,3 +752,5 @@ h2{
         overflow: visible;        /* remove horizontal scroll */
     }
 }
+=======
+>>>>>>> 98beace4106ee154191c7319a6f8f7d50b8df097
